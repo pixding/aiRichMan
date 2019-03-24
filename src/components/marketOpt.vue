@@ -4,7 +4,6 @@
   </section>
 </template>
 <script>
-import { mapState } from 'vuex'
 
 export default {
   data () {
@@ -34,10 +33,11 @@ export default {
 <style lang="less" scoped>
 .marketopt {
   display: flex;
-  justify-content: space-around;
+  margin-bottom: 1rem;
+  justify-content: space-between;
   .switch-item {
     color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     background: #2f8486;
     line-height: 2.4rem;
     width: 26%;

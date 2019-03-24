@@ -29,7 +29,7 @@ export default {
     sellProduct: function (product) {
       let plist = this.$store.state.Market.marketProducts
       let pindex = plist.findIndex(function (item) {
-        return item.pid == product.pid
+        return item.pid === product.pid
       })
       let totalMoney = 0
       if (~pindex) {

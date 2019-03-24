@@ -5,14 +5,15 @@
       <Market class="tradebox-left" />
       <Wharehouse class="tradebox-right" />
     </div>
-    <div>
+    <div class="userPanel">
       <UserStatus />
     </div>
     <div class="optPanel">
-
+      <OptPanel />
     </div>
     <div class="optBox">
       <marketOpt />
+      <UserOpt />
     </div>
   </div>
 </template>
@@ -23,6 +24,9 @@ import Market from '@/components/Market.vue'
 import Wharehouse from '@/components/Wharehouse.vue'
 import UserStatus from '@/components/UserStatus.vue'
 import marketOpt from '@/components/marketOpt.vue'
+import UserOpt from '@/components/UserOpt.vue'
+import OptPanel from '@/components/OptPanel.vue'
+
 
 export default {
   components: {
@@ -30,7 +34,9 @@ export default {
     Market,
     Wharehouse,
     UserStatus,
-    marketOpt
+    marketOpt,
+    UserOpt,
+    OptPanel
   }
 }
 </script>
@@ -47,10 +53,12 @@ export default {
     flex-grow: 1;
   }
 }
+
 .optPanel{
-  height: 9rem;
+  padding: 0.5rem;
 }
 .optBox{
-
+  padding: 0 1rem;
 }
+
 </style>
