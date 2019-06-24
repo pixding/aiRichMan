@@ -28,6 +28,8 @@ export default {
   },
   methods: {
     buyProduct: function (product) {
+      this.$store.commit('Platform/changePanelType', 'buy')
+      return;
       let buyProduct = {...product}
       let num = ~~(this.cash / buyProduct.price)
       buyProduct.num = num

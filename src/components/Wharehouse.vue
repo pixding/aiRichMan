@@ -2,7 +2,7 @@
   <section class="wareBox">
     <div class="title">
       <span>出租屋</span>
-      <span>100/100</span>
+      <span>{{warehouseNum - totalProductsNum}}/{{warehouseNum}}</span>
     </div>
     <dl class="market-dl market-header">
       <dt>货物</dt>
@@ -23,10 +23,23 @@ export default {
   computed: {
     ...mapState('Wares', [
       'products'
-    ])
+    ]),
+    ...mapState('User',[
+      'warehouseNum'
+    ]),
+    totalProductsNum:function(){
+      let totalNum = 0;
+      this.products.forEach(element => {
+        totalNum += element.num;
+      });
+      return totalNum;
+    }
   },
   methods: {
     sellProduct: function (product) {
+      this.$store.commit('Platform/changePanelType', 'sell')
+      return;
+
       let plist = this.$store.state.Market.marketProducts
       let pindex = plist.findIndex(function (item) {
         return item.pid === product.pid

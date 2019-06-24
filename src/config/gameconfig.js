@@ -4,9 +4,9 @@ const gameBase = {
   totalWeek: 52
 }
 const userBase = {
-  cash: 5000,
+  cash: 1000000,
   deposit: 0,
-  health: 100,
+  health: 98,
   fame: 100
 }
 const ProductList = [

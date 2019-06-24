@@ -4,7 +4,7 @@ import User from './user'
 import Process from './process'
 import Market from './market'
 import Wares from './wares'
-
+import Platform from './platform'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -12,6 +12,7 @@ export default new Vuex.Store({
     User,
     Process,
     Market,
-    Wares
+    Wares,
+    Platform
   }
 })

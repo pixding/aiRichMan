@@ -1,9 +1,9 @@
 <template>
   <section class="useropt">
-    <span class="switch-item">银行</span>
-    <span class="switch-item">医院</span>
-    <span class="switch-item">售楼部</span>
-    <span class="switch-item">中介</span>
+    <span class="switch-item" @click="goBank">银行</span>
+    <span class="switch-item" @click="goHospital">医院</span>
+    <span class="switch-item" >售楼部</span>
+    <span class="switch-item" @click="goAgency">中介</span>
   </section>
 </template>
 <script>
@@ -11,16 +11,17 @@
 export default {
   methods: {
     goBank: function () {
-
+      this.$store.commit('Platform/changePanelType', 'bank')
     },
     goHospital: function () {
-
+      this.$store.commit('Platform/changePanelType', 'hos')
     },
     goSalesCenter: function () {
 
     },
     goAgency: function () {
-
+      this.$emit('updateWareNum', 10);
+      this.$store.commit('Platform/changePanelType', 'ware')
     }
   }
 }

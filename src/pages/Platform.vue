@@ -27,7 +27,6 @@ import marketOpt from '@/components/marketOpt.vue'
 import UserOpt from '@/components/UserOpt.vue'
 import OptPanel from '@/components/OptPanel.vue'
 
-
 export default {
   components: {
     Process,
@@ -37,6 +36,11 @@ export default {
     marketOpt,
     UserOpt,
     OptPanel
+  },
+  computed: {
+    panelData:{
+      
+    }
   }
 }
 </script>
